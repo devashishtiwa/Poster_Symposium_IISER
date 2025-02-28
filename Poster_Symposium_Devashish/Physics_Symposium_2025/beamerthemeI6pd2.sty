@@ -1,0 +1,125 @@
+\ProvidesPackage{beamerthemeI6pd2}  % this style was created by Thomas Deselaers an Philippe Dreuw
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{tangocolors}
+\selectcolormodel{html}
+\mode<presentation>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\setbeamercolor{headline}{fg=white,bg=dblue}
+%\setbeamercolor{footline}{fg=tabutter, bg=ta3gray}
+%\setbeamerfont{footline}{size=\large,series=\tt}
+%\setbeamercolor{separation line}{bg=white}
+\setbeamercolor{title in headline}{fg=black}
+\setbeamercolor{author in headline}{fg=black}
+\setbeamercolor{institute in headline}{fg=black}
+
+\setbeamercolor{framesubtitle}{fg=white, bg=ta2gray}
+\setbeamercolor{author in head/foot}{fg=white, bg=black}
+\setbeamercolor{title in head/foot}{fg=white, bg=black}
+
+\setbeamercolor*{normal text}{fg=black, bg=ta3gray}
+\setbeamercolor*{block body}{bg=white,fg=black}
+\setbeamercolor*{block title}{fg=white,bg=dblue}
+\setbeamerfont*{block title}{size=\Huge,series=\bf}
+\setbeamercolor{upper separation line head}{fg=white}
+
+\setbeamercolor*{example body}{fg=ta3aluminium,bg=black}
+\setbeamercolor*{example text}{fg=ta3aluminium,bg=black}
+\setbeamercolor*{example title}{bg=white,fg=ta2gray}
+
+\setbeamercolor{footlinecolor}{fg=white, bg=dblue}
+
+%\setbeamercolor{alerted text}{fg=ta3gray}
+
+%\setbeamercolor{example text}{fg=taorange}
+\setbeamercolor{structure}{fg=ta3skyblue}
+
+\setbeamertemplate{itemize items}[circle]
+\setbeamercolor{itemize item}{fg=black, bg=black}
+\setbeamertemplate{subitemize items}[circle]
+\setbeamercolor{subitemize item projected}{fg=black, bg=black}
+\setbeamertemplate{navigation symbols}{}  % no navigation on a poster
+\setbeamercolor{caption}{bg=white, fg=uniant}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{block begin}{
+  \vskip.75ex
+  \begin{beamercolorbox}[
+  %ht=3.5ex,dp=0.5ex,center,leftskip=-1em,colsep*=.75ex]{block title}%
+  colsep*=4mm]{block title}
+    \usebeamerfont*{block title}%
+    %{\phantom{Gg}\insertblocktitle}% phantom because of baseline problem
+    \LARGE\insertblocktitle
+  \end{beamercolorbox}%
+  {\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
+  \usebeamerfont{block body}%
+  \begin{beamercolorbox}[rounded=false,shadow=false,colsep*=4mm,%sep=.75ex,
+  	vmode]
+  	%[leftskip=1em,colsep*=.75ex,sep=0.5ex,vmode]
+  	{block body}%
+    \ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+  }
+  \setbeamertemplate{block end}{
+  \end{beamercolorbox}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{headline}{  
+  \leavevmode
+
+  \begin{beamercolorbox}[wd=\paperwidth]{headline}
+    \begin{columns}[T]
+      \begin{column}{.02\paperwidth}
+      \end{column}
+      \begin{column}{.7\paperwidth}
+        \vskip3.5cm
+        \raggedright
+        \usebeamercolor{title in headline}{\color{fg}\VeryHuge{\inserttitle}\\[1ex]}
+        \usebeamercolor{author in headline}{\color{fg}\LARGE{\insertauthor}\\[1ex]}
+            \usebeamercolor{institute in headline}{\color{fg}\Large{\insertinstitute}}
+      \end{column}
+      \begin{column}{.25\paperwidth}
+        %\vskip8ex
+        \vskip1.5cm
+        %\topskip0pt
+        \vspace*{\fill}
+        \raggedleft
+        \begin{center}
+        \includegraphics[width=0.67\linewidth]{2023-tiwari-espresso-summer-school-poster-session-pimd-main/figures/iiser_logo.png}
+        \end{center}
+      \end{column}
+      \begin{column}{.03\paperwidth}
+      \end{column}
+    \end{columns}
+  \end{beamercolorbox}
+
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
+    \rule{0pt}{3pt}
+  \end{beamercolorbox}
+}
+
+\mode<all>
+\setbeamerfont{itemize/enumerate body}{size=\normalsize}
+\setbeamerfont{itemize/enumerate subbody}{size=\normalsize}
+\setbeamerfont{itemize/enumerate subsubbody}{size=\normalsize}
+
+\setbeamertemplate{bibliography item}[text]
+\setbeamercolor{bibliography item}{fg=black,bg=white}
+\setbeamercolor{bibliography entry author}{fg=black,bg=white}
+\setbeamercolor{bibliography item}{fg=black,bg=white}
+
+
+\setbeamertemplate{footline}
+{%
+  \leavevmode%
+  \hbox{\begin{beamercolorbox}[wd=.5\paperwidth,ht=5ex,dp=1.5ex,leftskip=.3cm plus1fill,rightskip=.3cm, left]{author in head/foot}%
+    \usebeamerfont{footline}\normalsize \hspace{1cm}Contact: auditya@iiserb.ac.in, \hspace{1cm} devashish20@iiserb.ac.in
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=5ex,dp=1.5ex,leftskip=.3cm,rightskip=.3cm plus1fil, right]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\normalsize PHYSICS SYMPOSIUM 2025-- Poster Session\hspace{1cm}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
